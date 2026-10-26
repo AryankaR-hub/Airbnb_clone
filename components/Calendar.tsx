@@ -53,7 +53,7 @@ export default function Calendar() {
                         <button
                           type="button"
                           aria-label={`${day} ${m.label}${s.selected ? ", selected" : ""}${s.unavailable ? ", unavailable" : ""}`}
-                          className={`grid h-11 w-11 place-items-center rounded-full text-sm font-medium ${s.selected ? "bg-ink text-white" : s.unavailable ? "cursor-default text-[#c1c1c1] line-through" : "hover:border hover:border-ink"}`}
+                          className={`grid h-11 w-11 place-items-center rounded-full text-sm font-medium ${s.selected ? "bg-ink text-white" : s.unavailable ? "cursor-default text-[#c1c1c1] line-through" : ""}`}
                         >
                           {day}
                         </button>
@@ -68,7 +68,7 @@ export default function Calendar() {
       </div>
 
       <div className="mt-3.5 flex items-center justify-between">
-        <button type="button" aria-label="Keyboard shortcuts" className="grid h-8 w-8 place-items-center"><TracedIcon name="Keyboard" /></button>
+        <button type="button" aria-label="Keyboard shortcuts" className="grid h-8 w-[30px] place-items-center"><span className="grid h-[22px] w-[30px] place-items-center rounded-md border border-[#c1c1c1]"><TracedIcon name="Keyboard" size={35} className="text-mute" /></span></button>
         <button type="button" className="pr-1.5 text-sm font-medium underline">Clear dates</button>
       </div>
     </section>

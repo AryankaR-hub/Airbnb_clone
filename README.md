@@ -14,10 +14,15 @@ npm run build   # production build check
 - Photo Tour (`/?modal=PHOTO_TOUR_SCROLLABLE`) and Lightbox (`&modalItem=1000+n`)
 - Save / Share / Reserve toasts
 
-## Placeholders to replace
-- Logo (text), amenity and review-category icons (lucide), 3 co-host avatars (initials)
-- Photo count is 40, the reference shows 43
+## Known gaps
+- The Airbnb Cereal font is proprietary and not bundled. Text uses Figtree as a stand-in until `public/fonts/AirbnbCereal-VF.woff2` is added (the `@font-face` is already set up).
+- Co-host avatars for Simran, Pallavi and Sanyukta reuse other avatar images as stand-ins (no photos were supplied).
+- Amenity icons not traced from the reference are hand-drawn SVGs in `components/AmenityIcon.tsx`.
 
-## Notes
-- Font stack is copied from the reference's computed styles (Airbnb Cereal VF first). Drop the font file in `public/fonts/` and add an @font-face if it needs to be bundled.
-- `public/images/photos/unplaced-*.jpeg` are photos not yet placed in the tour.
+## Architecture
+High-level production design for a vacation-rental marketplace (front end, backend, storage, search, deployment): `docs/architecture-diagram.png` (also as PDF).
+
+## AI workflow
+- Project rules: `CLAUDE.md` and `AGENTS.md`.
+- Review sub-agents: `.claude/agents/` (pixel-reviewer, a11y-reviewer, code-quality).
+- Prompt history: `docs/PROMPTS.md` (the second session's prompt is also in `docs/CHANGE_PROMPT.md`).

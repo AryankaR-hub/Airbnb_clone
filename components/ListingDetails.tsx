@@ -119,7 +119,7 @@ export default function ListingDetails() {
           ref={openerRef}
           type="button"
           onClick={() => setModalOpen(true)}
-          className="mt-7 h-12 rounded-lg border border-ink px-6 text-base font-medium hover:bg-wash"
+          className="mt-7 h-12 rounded-lg border border-ink px-6 text-base font-medium hover:bg-wash focus-visible:outline-none"
         >
           Show all {AMENITY_TOTAL} amenities
         </button>
